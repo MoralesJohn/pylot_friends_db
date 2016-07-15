@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Friends</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="static/css/styles.css" type="text/css">
+</head>
+<body>
+	<h4>Add a friend</h4>
+	<form action="/add_submit" method="post">
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td><label for="first_name">First Name:</label></td>
+					<td><input type="text" name="first_name" /></td>
+				</tr>
+				<tr>
+					<td><label for="last_name">Last Name:</label></td>
+					<td><input type="text" name="last_name" /></td>
+				</tr>
+
+				<tr>
+					<td><label for="email">Email:</label></td>
+					<td><input type="text" name="email" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="add" />
+	</form>
+</body>
+</html>

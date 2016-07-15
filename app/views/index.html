@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Friends</title>
+	<meta charset = "UTF-8">
+	<link rel="stylesheet" href="static/css/styles.css" type="text/css">
+</head>
+<body>
+	<div id="wrapper">
+		<h4>My list of friends</h4>	
+		<table>
+			<thead>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Email</td>
+				<td>Action</td>
+			</thead>
+			<tbody>
+				{% for friend in data %}
+					<tr>
+						<td>{{friend['first_name']}}</td>
+						<td>{{friend['last_name']}}</td>
+						<td>{{friend["email"]}}</td>
+						<td><a href="/show/{{friend['id']}}"><button>Show</button></a> <a href="/edit/{{friend['id']}}"><button>Edit</button></a> <a href="/delete/{{friend['id']}}"><button>Delete</button></a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<a href="/friends/add"><button>Add</button></a>
+	</div>
+</body>
+</html>
